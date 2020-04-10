@@ -1,0 +1,59 @@
+title: CollectionMethod
+type: object
+properties:
+  primaryTransducer:
+    type:
+      - string
+      - array
+    enum:
+      - camera - visible
+      - camera - IR
+      - lidar
+      - SAR
+      - microphone
+      - camera - other
+      - EM - other
+      - other
+      - eye
+      - ear
+      - skin
+      - nose
+      - transponder
+    description: The nature of the primary sensory transducers or instruments with which the observations were collected
+    items:
+      type: string
+  platform:
+    type:
+      - string
+      - array
+    enum:
+      - satellite - LEO
+      - satellite - geostationary
+      - satellite - other
+      - aircraft - drone
+      - aircraft - manned
+      - aircraft - general
+      - surface ship
+      - submersible
+      - tripod
+      - rigid - fixed
+      - rigid - axial
+      - bodily
+      - surface vehicle
+      - handheld
+      - unknown
+      - other
+    description: The nature of the physical support for the sensory apparatus
+    items:
+      type: string
+  recognition:
+    type: string
+    enum:
+      - deterministic
+      - perception - human
+      - perception - machine
+      - formal process
+    description: How the determination of classification and identity of the subject is performed
+description: A structured description of the means by which observtions were collected and encoded. This is a primary input to determinations of reliability and accuracy.
+x-tags:
+  - member

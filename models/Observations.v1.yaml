@@ -1,0 +1,19 @@
+title: Observations
+type: object
+properties:
+  contributor:
+    $ref: ./Contributor.v1.yaml
+  source:
+    $ref: ./ObservationSource.v1.yaml
+  collectionMethod:
+    $ref: ./CollectionMethod.v1.yaml
+  nodes:
+    oneOf:
+      - type: array
+        items:
+          $ref: ./Node.v1.yaml
+      - $ref: ./Node.v1.yaml
+x-tags:
+  - observe
+  - collection
+  - base

@@ -1,0 +1,15 @@
+title: ReadingObservations
+x-tags:
+  - observe
+  - collection
+allOf:
+  - $ref: ./Observations.v1.yaml
+  - type: object
+    properties:
+      readings:
+        oneOf:
+          - $ref: ./Reading.v1.yaml
+          - type: array
+            items:
+              $ref: ./Reading.v1.yaml
+description: ''

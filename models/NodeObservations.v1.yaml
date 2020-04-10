@@ -1,0 +1,15 @@
+title: NodeObservations
+allOf:
+  - $ref: ./Observations.v1.yaml
+  - type: object
+    properties:
+      nodes:
+        oneOf:
+          - $ref: ./Node.v1.yaml
+          - type: array
+            items:
+              $ref: ./Node.v1.yaml
+x-tags:
+  - observe
+  - collection
+description: ''

@@ -1,0 +1,140 @@
+title: Reservoir
+x-tags:
+  - node
+description: 'A container that can hold a quantity of materials, products, energy, animals, or people, as installed at a location and intended for one or more uses.'
+allOf:
+  - type: object
+    properties:
+      facilityId:
+        type: string
+      attributes:
+        type: object
+        properties:
+          contents:
+            type: string
+            enum:
+              - liquid
+              - gas
+              - solid
+              - parts
+              - finished products
+              - humans
+              - animals
+              - electric charge
+              - heat
+              - gravitational potential
+              - kinetic energy
+              - pressure
+          site:
+            type: string
+            enum:
+              - uncovered
+              - covered
+              - enclosed
+          support:
+            type: string
+            enum:
+              - underground
+              - in-ground
+              - on-ground
+              - elevated
+              - rooftop
+          mobile:
+            type: string
+            enum:
+              - fixed
+              - wheeled
+              - towable
+              - self-powered
+          envelope:
+            type: string
+            enum:
+              - pile
+              - rigid - closed top
+              - rigid - open top
+              - rigid - floating top
+              - bladder
+              - pool - manmade
+              - lake - manmade
+              - lake-natural
+              - shelves
+              - racks
+              - building - no climate control
+              - building - climate control
+              - building - habitable
+              - building - sealed
+          material:
+            type: string
+            enum:
+              - glass
+              - plastic
+              - fiberglass
+              - steel
+              - aluminum
+              - copper
+              - fabric
+              - masonry
+              - ceramic
+              - wood
+              - mixed
+              - other
+          shape:
+            type: string
+            enum:
+              - cylinder - horizontal
+              - cylinder - vertical
+              - sphere
+              - teardrop
+              - rectangular
+              - ballon
+              - pillow
+              - pyramidal
+              - structural
+              - irregular
+              - other
+          bottom:
+            type: string
+            enum:
+              - flat
+              - slope
+              - conical
+              - dish
+              - other
+          insulation:
+            type: string
+            enum:
+              - none
+              - air
+              - vacuum
+              - gas
+              - fiber
+              - other
+          wall:
+            type: string
+            enum:
+              - none
+              - single
+              - double
+              - reinforced
+              - structural
+              - other
+      capacity:
+        type: object
+        properties:
+          population:
+            type: string
+          generic:
+            type: string
+          nominal:
+            type: string
+          actual:
+            type: string
+          effective:
+            type: string
+      nodeType:
+        type: string
+        enum:
+          - reservoir
+    required:
+      - nodeType
+  - $ref: ./Node.v1.yaml

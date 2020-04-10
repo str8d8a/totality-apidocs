@@ -1,0 +1,25 @@
+title: ObservationSource
+type: object
+description: 'The organization or entity that is responsible for collecting, aggregating, and/or curating a set of observations. This is most relevant when an existing dataset is being ingested as a set of observations.'
+properties:
+  organizationName:
+    type: string
+  url:
+    type: string
+    format: uri
+  type:
+    type: string
+    enum:
+      - non-profit
+      - company
+      - individual
+      - government agency
+      - other
+  seriesName:
+    type: string
+  datasetName:
+    type: string
+  version:
+    type: string
+x-tags:
+  - member

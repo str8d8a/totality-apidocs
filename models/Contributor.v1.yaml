@@ -1,0 +1,17 @@
+title: Contributor
+type: object
+properties:
+  username:
+    type: string
+  keyId:
+    type: string
+  email:
+    type: string
+    format: email
+  name:
+    type: string
+  metadata:
+    type: object
+description: Information describing the user who contributed an observation
+x-tags:
+  - member

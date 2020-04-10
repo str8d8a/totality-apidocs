@@ -1,0 +1,13 @@
+title: Resource
+x-tags:
+  - node
+allOf:
+  - type: object
+    properties:
+      nodeType:
+        type: string
+        enum:
+          - resource
+    required:
+      - nodeType
+  - $ref: ./Node.v1.yaml

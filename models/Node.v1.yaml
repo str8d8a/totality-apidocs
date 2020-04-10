@@ -1,0 +1,21 @@
+title: Node
+description: A helper schema that provides a base for all four node types
+type: object
+properties:
+  typeId:
+    type: string
+  services:
+    type: array
+    items:
+      $ref: ./NodeService.v1.yaml
+  nodeType:
+    type: string
+  location:
+    $ref: ../geojson/point.json
+  shape:
+    $ref: ../geojson/feature.json
+required:
+  - typeId
+  - nodeType
+x-tags:
+  - base

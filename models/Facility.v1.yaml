@@ -1,0 +1,20 @@
+title: Facility
+x-tags:
+  - node
+allOf:
+  - type: object
+    properties:
+      commonName:
+        type: string
+      description:
+        type: string
+      transformationCapabilities:
+        type: array
+        items: {}
+      nodeType:
+        type: string
+        enum:
+          - facility
+    required:
+      - nodeType
+  - $ref: ./Node.v1.yaml

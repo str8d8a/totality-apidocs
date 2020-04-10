@@ -1,0 +1,7 @@
+title: Reading
+type: object
+x-tags:
+  - observe
+properties:
+  id:
+    type: string

@@ -1,0 +1,5 @@
+title: NodeService
+type: object
+properties:
+  id:
+    type: string
