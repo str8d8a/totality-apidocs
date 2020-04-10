@@ -39,10 +39,13 @@ paths:
             schema:
               $ref: ../models/ReadingObservations.v1.yaml
       description: Submit a new or updated reading
+      security:
+        - API Key - 1: []
   /observations/nodes:
     post:
       summary: Create or update one or more nodes
-      tags: []
+      tags:
+        - observe
       responses:
         '200':
           description: OK
@@ -59,6 +62,8 @@ paths:
         description: ''
       parameters: []
       description: Submit a new or updated node
+      security:
+        - API Key - 1: []
     parameters: []
 components:
   schemas: {}
